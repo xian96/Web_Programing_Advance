@@ -1,15 +1,15 @@
-const express = require("express");
-const app = express();
-const handlebar = require("")
+const express       = require("express");
+const exphbs        = require('express-handlebars');
+const routeConfig   = require("./routes");
+const app           = express();
 
-app.get("/", (req, res)=>{
-    try{
-        res.json("hello world");
-    }catch(e){
-        res.status(404).json(`error: ${e}`)
-    }
-})
+app.engine('handlebars', exphbs());
+app.use(express.static(__dirname+ "/public"));
+app.set("view engine", "handlebars");
 
-app.listen(3000, (req, res)=>{
+routeConfig(app);
+
+app.listen(3000, ()=>{
+    console.log("We've now got a server!");
     console.log("listen on: http://localhost:3000");
 })

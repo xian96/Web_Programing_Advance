@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-3">
+      {{!-- sidebar --}}
+      <nav class="nav ">
+        <div class="col-12" >
+          {{#each cards}}
+          <a class="nav-link" href="#link{{name}}">{{name}}</a>
+          {{/each}}
+        </div>
+      </nav>
+    </div>
+    <div class="col-sm-12 col-md-9">
+      {{!-- all the card --}}
+      <div class="row">
+        {{#each cards}}
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a id="link{{name}}"></a>
+          <div class="card">
+            <img src="{{image}}" class="card-img-top" alt="picture of {{name}}">
+            <div class="card-body">
+              <h5 class="card-title">{{name}}</h5>
+              <p class="card-text">{{description}}</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{name}}">
+                More Info
+              </button>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+{{#each cards}}
+  {{!-- modal --}}
+  <div class="modal fade" id="{{name}}" tabindex="-1" role="dialog" aria-labelledby="{{name}}Title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="{{name}}Title">{{name}}</h5>
+        </div>
+        <div class="modal-body">
+          {{detail}} 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
