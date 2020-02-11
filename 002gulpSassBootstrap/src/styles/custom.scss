@@ -38,25 +38,35 @@
 // @import "../../node_modules/bootstrap/scss/print";
 
 body{
-    text-transform: $text-uppercase;
+    div{
+        text-transform: $text-uppercase;
+    }
     background-color: $body-background;
 }
 
-#backgroundImage{
-    width: 100%;
-    img{
-        display: block;
-        position: relative;
-    }
-}
-
 nav {
-
     a{
+        font-size: 75%;
         border: $main-border;
-        background-color: $color-primary;
         margin: 1em 0;
     }
 }
 
+.card{
+    margin-bottom: 10%;
+    // button{
+        text-align: center;
+    // }
+}
 
+#sidebar{
+    // @media {
+        position: fixed;
+    // }
+}
+
+.modal{
+    div{
+        text-transform: $text-lowercase;
+    }
+}
