@@ -1907,6 +1907,12 @@ body {
   text-transform: uppercase;
   background-color: #ccffcc; }
 
+#backgroundImage {
+  width: 100%; }
+  #backgroundImage img {
+    display: block;
+    position: relative; }
+
 nav a {
   border: 1px blue dashed;
   background-color: white;

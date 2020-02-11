@@ -42,6 +42,14 @@ body{
     background-color: $body-background;
 }
 
+#backgroundImage{
+    width: 100%;
+    img{
+        display: block;
+        position: relative;
+    }
+}
+
 nav {
 
     a{
