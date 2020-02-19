@@ -4,7 +4,7 @@ const constructorMethod = (app) =>{
     app.use("/", cardsRoute);
 
     app.use("*", (req, res)=>{
-        res.redirect("/");
+        res.status(404).json("404 error!");
     });
 };
 
