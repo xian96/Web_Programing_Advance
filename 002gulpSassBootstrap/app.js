@@ -12,4 +12,4 @@ routeConfig(app);
 app.listen(3000, ()=>{
     console.log("We've now got a server!");
     console.log("listen on: http://localhost:3000");
-})
+});
