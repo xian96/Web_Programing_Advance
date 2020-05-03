@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express from 'express';
 import configRoute from './routes';
 import configMiddleware from './middleware';
  
@@ -10,8 +10,8 @@ class App {
 	constructor() {
 		this.app = express();
 		this.config();
-        this.configRoute(this.app);
         this.configMiddleware(this.app);
+        this.configRoute(this.app);
 	}
 
 	private config(): void {

@@ -1,8 +1,9 @@
-import { Request, Response } from 'express';
-import {routes as requestMiddleware} from "./request";
+// import { Request, Response } from 'express';
+import requestMiddleware from "./request";
 
 let configMiddleware = (app) =>{
-    requestMiddleware(app);
+    console.log("heloo test this is an middleware!");
+    app.use(requestMiddleware);
 };
 
 export default configMiddleware;
